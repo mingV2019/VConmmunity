@@ -66,4 +66,8 @@ mvn flyway:migrate
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
 
-
+## 操作
+生成名字CTRL+ALT+V
+格式化代码CTRL+ALT+L
+最大化窗口CTRL+SHIFT+F12
+生成gettersetter ALT+INS
