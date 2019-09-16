@@ -72,3 +72,9 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 最大化窗口:CTRL+SHIFT+F12
 生成:gettersetter ALT+INS
 ```
+## github_authorize
+```
+1.GET https://github.com/login/oauth/authorize
+    携带client_id&redirect_uri&scope&state
+2.
+```
