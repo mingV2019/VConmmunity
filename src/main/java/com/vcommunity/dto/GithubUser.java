@@ -8,7 +8,7 @@ public class GithubUser {
     private String name;
     private Long id;
     private String bio;
-    private String avatarUrl;
+//    private String avatarUrl;
 
     public String getName() {
         return name;
@@ -34,11 +34,20 @@ public class GithubUser {
         this.bio = bio;
     }
 
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
+//    public String getAvatarUrl() {
+//        return avatarUrl;
+//    }
+//
+//    public void setAvatarUrl(String avatarUrl) {
+//        this.avatarUrl = avatarUrl;
+//    }
 
-    public void setAvatarUrl(String avatarUrl) {
-        this.avatarUrl = avatarUrl;
+    @Override
+    public String toString() {
+        return "GithubUser{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", bio='" + bio + '\'' +
+                '}';
     }
 }
