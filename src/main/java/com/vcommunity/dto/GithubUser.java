@@ -34,13 +34,6 @@ public class GithubUser {
         this.bio = bio;
     }
 
-//    public String getAvatarUrl() {
-//        return avatarUrl;
-//    }
-//
-//    public void setAvatarUrl(String avatarUrl) {
-//        this.avatarUrl = avatarUrl;
-//    }
 
     @Override
     public String toString() {

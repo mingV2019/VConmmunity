@@ -78,3 +78,15 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
     携带client_id&redirect_uri&scope&state
 2.
 ```
+```
+create table TABLE_NAME
+(
+    ID           INTEGER default (NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_03ED2FE5_20B3_4323_A3F3_9848883B0FB3") auto_increment
+        primary key,
+    ACCOUNT_ID   VARCHAR(100),
+    NAME         VARCHAR(50),
+    TOKEN        CHAR(36),
+    GMT_CREATE   BIGINT,
+    GMT_MODIFIED BIGINT
+);
+```
