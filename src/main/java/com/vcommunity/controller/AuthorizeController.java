@@ -59,7 +59,9 @@ public class AuthorizeController {
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
-            response.addCookie(new Cookie("token",token));
+            Cookie token1 = new Cookie("token", token);
+            token1.setMaxAge(60*60*24*30*12);
+            response.addCookie(token1);
             return "redirect:/";
         } else {
             //登录失败，重新登陆
