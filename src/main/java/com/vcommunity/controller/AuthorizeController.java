@@ -50,7 +50,7 @@ public class AuthorizeController {
         accessTokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getUser(accessToken);
-        if (githubUser != null) {
+        if (githubUser != null && githubUser.getId() != null) {
             User user = new User();
             String token = UUID.randomUUID().toString();
             user.setToken(token);
@@ -60,7 +60,7 @@ public class AuthorizeController {
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
             Cookie token1 = new Cookie("token", token);
-            token1.setMaxAge(60*60*24*30*12);
+            token1.setMaxAge(60 * 60 * 24 * 30 * 12);
             response.addCookie(token1);
             return "redirect:/";
         } else {
