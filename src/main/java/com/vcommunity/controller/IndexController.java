@@ -19,7 +19,7 @@ public class IndexController {
     public String index(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         //if自加
-        if (cookies!=null){
+        if (cookies != null && cookies.length != 0) {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("token")) {
                     String token = cookie.getValue();
