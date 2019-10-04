@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
  * @description：
  * @date ：Created in 2019/9/18 23:47
  */
+@Component
 @Mapper
 public interface UserMapper {
     @Insert("insert into user (name,account_id,token,gmt_create,gmt_modified,avatar_url) values (#{name},#{accountId},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl}) ")

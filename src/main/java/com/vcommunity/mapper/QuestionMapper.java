@@ -3,12 +3,14 @@ package com.vcommunity.mapper;
 import com.vcommunity.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 /**
  * @author ：mingV
  * @description：
  * @date ：Created in 2019/9/28 23:43
  */
+@Component
 @Mapper
 public interface QuestionMapper {
 
